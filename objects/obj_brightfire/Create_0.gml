@@ -1,7 +1,7 @@
 event_inherited();
 
-audio_play_sound(lp_roberto_ambience, 0, true)
-audio_sound_gain(lp_roberto_ambience, 0, 0)
+audio_play_sound(lp_ambience_brightfire, 0, true)
+audio_sound_gain(lp_ambience_brightfire, 0, 0)
 visible = false;
 owner = noone;
 scale = 1.5;
@@ -22,6 +22,6 @@ wait_for_seconds(duration, change, true);
 
 function activate(_owner) {
 	owner = _owner;
-	audio_sound_gain(lp_roberto_ambience, 1, 1000);
+	audio_sound_gain(lp_ambience_brightfire, 1, 1000);
 	visible = true;
 }

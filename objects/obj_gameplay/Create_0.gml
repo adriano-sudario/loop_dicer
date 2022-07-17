@@ -22,5 +22,6 @@ dice_options = {
 };
 is_chosing_dice = false;
 slimes_killed_count = 0;
-font = fnt_mono_smallest;
+font = fnt_mono_small;
+font_small = fnt_mono_smallest;
 show_dice_chosing_hud();

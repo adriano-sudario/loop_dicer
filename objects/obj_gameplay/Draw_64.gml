@@ -1,7 +1,14 @@
+if (obj_player.is_dead) {
+	prepare_text_draw(font, fa_center, fa_center);
+	draw_outlined_text(RESOLUTION_WIDTH * .5, RESOLUTION_HEIGHT * .5,
+		"you died. press enter or space to restart.");
+	return;
+}
+
 if (is_chosing_dice)
 	return;
 	
-prepare_text_draw(font, fa_center, fa_center);
+prepare_text_draw(font_small, fa_center, fa_center);
 draw_outlined_text(RESOLUTION_WIDTH * .5, 10, string(slimes_killed_count) + " slimes killed");
 
 var _hp_bar_width = 500;

@@ -1,4 +1,13 @@
-if (!can_move || is_dead || obj_gameplay.is_chosing_dice)
+if (is_dead) {
+	if (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) {
+		audio_stop_all();
+		room_restart();
+	}
+		
+	return;
+}
+
+if (!can_move || obj_gameplay.is_chosing_dice)
 	return;
 
 var x_force = (keyboard_check(ord("D")) || keyboard_check(vk_right))

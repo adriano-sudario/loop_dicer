@@ -3,8 +3,13 @@ description = "ambience dice";
 type = "ambience";
 
 function get_rolled_result() {
+	var _index = 0;
+	
+	if (value > 3)
+		_index = 1;
+	
 	return {
 		option: obj_gameplay.dice_options.ambience,
-		index: 0,
+		index: _index,
 	}
 }

@@ -1,7 +1,7 @@
 event_inherited();
 
-audio_play_sound(lp_roberto_base, 0, true)
-audio_sound_gain(lp_roberto_base, 0, 0)
+audio_play_sound(lp_base_felspell, 0, true)
+audio_sound_gain(lp_base_felspell, 0, 0)
 visible = false;
 owner = noone;
 scale = .5;
@@ -17,6 +17,6 @@ TweenFire(id, EaseLinear, TWEEN_MODE_PATROL, true, 0.0, duration,
 
 function activate(_owner) {
 	owner = _owner;
-	audio_sound_gain(lp_roberto_base, 1, 1000);
+	audio_sound_gain(lp_base_felspell, 1, 1000);
 	visible = true;
 }

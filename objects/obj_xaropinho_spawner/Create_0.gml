@@ -1,5 +1,5 @@
-sound_id = audio_play_sound(lp_roberto_bass, 0, true);
-audio_sound_gain(lp_roberto_bass, 0, 0);
+sound_id = audio_play_sound(lp_bass_xaropinho, 0, true);
+audio_sound_gain(lp_bass_xaropinho, 0, 0);
 visible = false;
 owner = noone;
 duration = time_bpm_to_seconds(155) * 4;
@@ -19,7 +19,7 @@ function spawn() {
 function activate(_owner) {
 	owner = _owner;
 	visible = true;
-	audio_sound_gain(lp_roberto_bass, 1, 1000);
+	audio_sound_gain(lp_bass_xaropinho, 1, 1000);
 }
 
 spawn();

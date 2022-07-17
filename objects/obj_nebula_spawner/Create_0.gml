@@ -1,5 +1,5 @@
-sound_id = audio_play_sound(lp_roberto_beat, 0, true);
-audio_sound_gain(lp_roberto_beat, 0, 0);
+sound_id = audio_play_sound(lp_beat_nebula, 0, true);
+audio_sound_gain(lp_beat_nebula, 0, 0);
 visible = false;
 owner = noone;
 duration = time_bpm_to_seconds(155) * 2;
@@ -18,7 +18,7 @@ function spawn() {
 function activate(_owner) {
 	owner = _owner;
 	visible = true;
-	audio_sound_gain(lp_roberto_beat, 1, 1000);
+	audio_sound_gain(lp_beat_nebula, 1, 1000);
 }
 
 spawn();

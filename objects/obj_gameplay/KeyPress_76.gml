@@ -1,2 +1,2 @@
 if (keyboard_check(vk_control))
-	show_dice_chosing_hud();
+	obj_player.xp = obj_player.xp_to_next_level;
