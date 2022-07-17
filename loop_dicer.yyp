@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"TPGrid","path":"scripts/TPGrid/TPGrid.yy",},"order":4,},
+    {"id":{"name":"fnt_mono_super_small","path":"fonts/fnt_mono_super_small/fnt_mono_super_small.yy",},"order":4,},
     {"id":{"name":"TGMS_EasyTweens","path":"scripts/TGMS_EasyTweens/TGMS_EasyTweens.yy",},"order":6,},
     {"id":{"name":"spr_slime_death","path":"sprites/spr_slime_death/spr_slime_death.yy",},"order":3,},
     {"id":{"name":"spr_slime_idle","path":"sprites/spr_slime_idle/spr_slime_idle.yy",},"order":0,},
@@ -138,8 +139,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"GameplayRoom","path":"rooms/GameplayRoom/GameplayRoom.yy",},},
     {"roomId":{"name":"InitialRoom","path":"rooms/InitialRoom/InitialRoom.yy",},},
+    {"roomId":{"name":"GameplayRoom","path":"rooms/GameplayRoom/GameplayRoom.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
