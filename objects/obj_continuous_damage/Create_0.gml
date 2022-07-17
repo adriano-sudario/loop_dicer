@@ -6,7 +6,7 @@ function apply_damage(_unit) {
 		return;
 	
 	for (var i = 0; i < array_length(ignored_units); i++)
-		if (instance_exists(ignored_units[i]) && _unit.id == ignored_units[i].id)
+		if (!instance_exists(ignored_units[i]) || _unit.id == ignored_units[i].id)
 			return;
 	
 	_unit.take_damage(damage, DamageType.Blink);
@@ -16,7 +16,7 @@ function apply_damage(_unit) {
 	{
 		with(_self) {
 			for (var i = 0; i < array_length(ignored_units); i++) {
-				if (instance_exists(ignored_units[i]) && ignored_units[i].id == _other.id) {
+				if (!instance_exists(ignored_units[i]) || ignored_units[i].id == _other.id) {
 					array_delete(ignored_units, i, 1);
 					break;
 				}

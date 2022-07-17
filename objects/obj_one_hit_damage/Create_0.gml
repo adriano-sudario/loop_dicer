@@ -6,7 +6,7 @@ function apply_damage(_unit) {
 		return;
 
 	for (var i = 0; i < array_length(ignored_units); i++)
-		if (instance_exists(ignored_units[i]) && _unit.id == ignored_units[i].id)
+		if (!instance_exists(ignored_units[i]) || _unit.id == ignored_units[i].id)
 			return;
 
 	_unit.take_damage(damage);
