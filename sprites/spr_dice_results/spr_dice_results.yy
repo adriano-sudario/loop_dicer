@@ -89,8 +89,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Interactives",
-    "path": "folders/Sprites/Interactives.yy",
+    "name": "HUD",
+    "path": "folders/Sprites/HUD.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_dice_results",

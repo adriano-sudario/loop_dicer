@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Interactives",
-    "path": "folders/Objects/Interactives.yy",
+    "name": "HUD",
+    "path": "folders/Objects/HUD.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_dice_base",

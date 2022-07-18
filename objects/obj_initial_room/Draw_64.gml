@@ -13,7 +13,8 @@ draw_text(15, RESOLUTION_HEIGHT - 120, "programming and game design: adriano sud
 draw_text(15, RESOLUTION_HEIGHT - 105, "sounds: jose paula");
 
 draw_set_colour(make_color_rgb(41, 24, 90));
-draw_text(15, RESOLUTION_HEIGHT - 75, "background by liz wilson (behance)");
+draw_text(15, RESOLUTION_HEIGHT - 90, "background by liz wilson (behance)");
+draw_text(15, RESOLUTION_HEIGHT - 75, "dice assets by kicked-in-teeth (itch)");
 draw_text(15, RESOLUTION_HEIGHT - 60, "characters assets by game endeavor (itch)");
 draw_text(15, RESOLUTION_HEIGHT - 45, "vfx's assets by codemanu (itch)");
 draw_text(15, RESOLUTION_HEIGHT - 30, "explosion vfx's assets by ansimuz (itch)");
