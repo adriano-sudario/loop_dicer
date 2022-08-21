@@ -12,8 +12,10 @@ duration = time_bpm_to_seconds(155);
 radius = 35;
 name = "felspell base";
 
-TweenFire(id, EaseLinear, TWEEN_MODE_PATROL, true, 0.0, duration,
-	"scale", scale, max_scale);
+tweening_custom(TWEEN_MODE.YOYO, "scale", max_scale, duration, 
+	{
+		ease_function: linear,
+	});
 
 function activate(_owner) {
 	owner = _owner;
