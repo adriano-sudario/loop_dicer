@@ -1,14 +1,10 @@
 event_inherited();
 
-audio_play_sound(lp_ambience_brightfire, 0, true)
-audio_sound_gain(lp_ambience_brightfire, 0, 0)
-visible = false;
-owner = noone;
 scale = 1.5;
 image_xscale = scale;
 image_yscale = scale * 2;
-duration = time_bpm_to_seconds(155) * 4;
 name = "brightfire ambience";
+sample = new LoopManagerSample("lp_ambience_brightfire.wav");
 
 function change() {
 	if (owner == noone)
@@ -17,11 +13,6 @@ function change() {
 	image_angle = random_range(0, 360);
 }
 
-change();
-wait_for_seconds(duration, change, true);
-
-function activate(_owner) {
-	owner = _owner;
-	audio_sound_gain(lp_ambience_brightfire, 1, 1000);
-	visible = true;
+function on_compass_end(_loop) {
+	change();
 }

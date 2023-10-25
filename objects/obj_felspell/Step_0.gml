@@ -1,8 +1,15 @@
-if (owner == noone)
+if (owner == noone || sample.manager == noone)
 	return;
 
 x = owner.x;
 y = owner.y;
+
+var scale_increment = sample.manager.GetCurrentLengthPercent() * (max_scale - min_scale);
+
+if (sample.manager.current_compass_beat % 2 == 0)
+	scale = min_scale + scale_increment;
+else
+	scale = max_scale - scale_increment;
 
 image_xscale = scale;
 image_yscale = scale;

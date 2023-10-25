@@ -1,9 +1,7 @@
-sound_id = audio_play_sound(lp_beat_nebula, 0, true);
-audio_sound_gain(lp_beat_nebula, 0, 0);
-visible = false;
-owner = noone;
-duration = time_bpm_to_seconds(155) * 2;
+event_inherited();
+
 name = "nebula beat";
+sample = new LoopManagerSample("lp_beat_nebula.wav");
 
 function spawn() {
 	if (owner == noone || obj_gameplay.is_chosing_dice)
@@ -15,11 +13,7 @@ function spawn() {
 	}
 }
 
-function activate(_owner) {
-	owner = _owner;
-	visible = true;
-	audio_sound_gain(lp_beat_nebula, 1, 1000);
+function on_beat_end(_loop) {
+	if (_loop.current_compass_beat % 2 == 0)
+		spawn();
 }
-
-spawn();
-wait_for_seconds(duration, spawn, true);

@@ -4,20 +4,20 @@ owned_loops = { beat: noone, base: noone, bass: noone, ambience: noone };
 
 dice_options = {
 	beat: [
-		instance_create_layer(0, 0, "SpellsAfterCharacters", obj_nebula_spawner),
-		instance_create_layer(0, 0, "SpellsBeforeCharacters", obj_phantom_spawner)
+		{ layer_name: "SpellsAfterCharacters", object: obj_nebula_spawner },
+		{ layer_name: "SpellsBeforeCharacters", object: obj_phantom_spawner }
 	],
 	base: [
-		instance_create_layer(0, 0, "SpellsBeforeCharacters", obj_felspell),
-		instance_create_layer(0, 0, "SpellsBeforeCharacters", obj_vortex),
+		{ layer_name: "SpellsBeforeCharacters", object: obj_felspell },
+		{ layer_name: "SpellsBeforeCharacters", object: obj_vortex }
 	],
 	bass: [
-		instance_create_layer(0, 0, "SpellsAfterCharacters", obj_sunburn_spawner),
-		instance_create_layer(0, 0, "SpellsAfterCharacters", obj_xaropinho_spawner)
+		{ layer_name: "SpellsAfterCharacters", object: obj_sunburn_spawner },
+		{ layer_name: "SpellsAfterCharacters", object: obj_xaropinho_spawner }
 	],
 	ambience: [
-		instance_create_layer(0, 0, "SpellsBeforeCharacters", obj_brightfire),
-		instance_create_layer(0, 0, "SpellsBeforeCharacters", obj_magickahit_spawner)
+		{ layer_name: "SpellsBeforeCharacters", object: obj_brightfire },
+		{ layer_name: "SpellsBeforeCharacters", object: obj_magickahit_spawner }
 	]
 };
 is_chosing_dice = false;

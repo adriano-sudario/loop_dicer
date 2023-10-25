@@ -12,7 +12,10 @@
     "name": "Spawners",
     "path": "folders/Objects/Spawners.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_spell_sample",
+    "path": "objects/obj_spell_sample/obj_spell_sample.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

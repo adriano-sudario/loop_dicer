@@ -1,0 +1,1 @@
+enum LOOP_STATE { BLANK = 0, ARMED = 1, PLAYING = 2 }

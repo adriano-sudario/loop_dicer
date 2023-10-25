@@ -1,14 +1,10 @@
 event_inherited();
 
-audio_play_sound(lp_base_vortex, 0, true)
-audio_sound_gain(lp_base_vortex, 0, 0)
-visible = false;
-owner = noone;
 scale = .5;
 image_xscale = scale;
 image_yscale = scale;
-duration = time_bpm_to_seconds(155) * 4;
 name = "vortex ambience";
+sample = new LoopManagerSample("lp_base_vortex.wav");
 
 function change() {
 	if (owner == noone)
@@ -24,11 +20,6 @@ function change() {
 	y = random_range(_view_y + 50, _view_y + _view_height - 50);
 }
 
-change();
-wait_for_seconds(duration, change, true);
-
-function activate(_owner) {
-	owner = _owner;
-	audio_sound_gain(lp_base_vortex, 1, 1000);
-	visible = true;
+function on_compass_end(_loop) {
+	change();
 }

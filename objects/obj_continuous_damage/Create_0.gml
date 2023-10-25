@@ -1,3 +1,5 @@
+event_inherited();
+
 damage = .5;
 ignored_units = [];
 

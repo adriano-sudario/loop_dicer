@@ -1,10 +1,8 @@
-sound_id = audio_play_sound(lp_bass_xaropinho, 0, true);
-audio_sound_gain(lp_bass_xaropinho, 0, 0);
-visible = false;
-owner = noone;
-duration = time_bpm_to_seconds(155) * 4;
+event_inherited();
+
 velocity = 2;
 name = "little syrup bass";
+sample = new LoopManagerSample("lp_bass_xaropinho.wav");
 
 function spawn() {
 	if (owner == noone || obj_gameplay.is_chosing_dice)
@@ -16,11 +14,6 @@ function spawn() {
 	xaropinho.velocity = velocity;
 }
 
-function activate(_owner) {
-	owner = _owner;
-	visible = true;
-	audio_sound_gain(lp_bass_xaropinho, 1, 1000);
+function on_compass_end(_loop) {
+	spawn();
 }
-
-spawn();
-wait_for_seconds(duration, spawn, true);

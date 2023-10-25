@@ -1,9 +1,7 @@
-sound_id = audio_play_sound(lp_bass_f1, 0, true);
-audio_sound_gain(lp_bass_f1, 0, 0);
-visible = false;
-owner = noone;
-duration = time_bpm_to_seconds(155) * 4;
+event_inherited();
+
 name = "f1 bass";
+sample = new LoopManagerSample("lp_bass_f1.wav");
 
 function spawn() {
 	if (owner == noone || obj_gameplay.is_chosing_dice)
@@ -15,11 +13,6 @@ function spawn() {
 	}
 }
 
-function activate(_owner) {
-	owner = _owner;
-	visible = true;
-	audio_sound_gain(lp_bass_f1, 1, 1000);
+function on_compass_end(_loop) {
+	spawn();
 }
-
-spawn();
-wait_for_seconds(duration, spawn, true);
