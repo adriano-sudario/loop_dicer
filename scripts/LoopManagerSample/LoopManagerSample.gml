@@ -12,7 +12,7 @@ function LoopManagerSample(_file_path) : WavSound(_file_path) constructor
 	}
 	
 	function Restart() {
-		current_offset = header.data.offset;
+		current_offset = GetOffsetFromManager();
 		current_compass = 0;
 		
 		if (is_playing && !audio_is_playing(play_index))
@@ -25,7 +25,7 @@ function LoopManagerSample(_file_path) : WavSound(_file_path) constructor
 			: manager.cycle_length;
 		
 		if (_sample_size <= 0) {
-			current_offset = file_size;
+			current_offset = GetOffsetFromManager();
 			return;
 		}
 		
@@ -59,7 +59,7 @@ function LoopManagerSample(_file_path) : WavSound(_file_path) constructor
 			header = change_on_next_update.header;
 			length = header.GetLengthInSeconds();
 			file_size = header.riff.size + 8;
-			current_offset = current_offset - header.data.offset;
+			current_offset = GetOffsetFromManager();
 			change_on_next_update = noone;
 		}
 		

@@ -30,14 +30,9 @@ function stop_roll() {
 	sprite_index = spr_dice_results;
 	image_index = value - 1;
 	is_rolling = false;
-	
-	var _close = function() {
-		obj_dice_chosing_hud.close();
-	}
-
-	var _time_source = time_source_create(
-		time_source_game, time_bpm_to_seconds(155) * 4, time_source_units_seconds, _close);
-
+	var _close = function() { obj_dice_chosing_hud.close(); }
+	var _duration = time_bpm_to_seconds(BPM) * 4;
+	var _time_source = time_source_create(time_source_game, _duration, time_source_units_seconds, _close);
 	time_source_start(_time_source);
 }
 

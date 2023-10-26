@@ -59,6 +59,15 @@ function die() {
 	sprite_index = spr_player_death;
 	is_dead = true;
 	
+	with (obj_loop_manager) {
+		with (loop) {
+			manager.Stop();
+			instance_destroy();
+		}
+		
+		loop = noone;
+	}
+	
 	instance_destroy(obj_gameplay.owned_loops.beat);
 	instance_destroy(obj_gameplay.owned_loops.base);
 	instance_destroy(obj_gameplay.owned_loops.bass);

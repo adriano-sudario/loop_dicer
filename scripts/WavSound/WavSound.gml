@@ -91,13 +91,13 @@ function WavSound(_file_path, _is_looping = true) constructor
 		play_index = noone;
 		is_playing = false;
 		is_paused = true;
+		buffers_added = 0;
 	}
 	
 	function Stop() {
 		Pause();
 		current_offset = header.data.offset;
 		is_paused = false;
-		buffers_added = 0;
 	}
 	
 	function Update() {

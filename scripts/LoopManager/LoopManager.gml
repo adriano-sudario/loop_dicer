@@ -56,9 +56,19 @@ function LoopManager(
 	
 	function AddSample(_sample) {
 		_sample.Load(self);
+			
+		if (is_active) {
+			for (var i = 0; i < array_length(samples); i++) {
+				samples[i].current_offset = samples[i].GetOffsetFromManager();
+				samples[i].Pause();
+			}
 		
-		if (is_active)
+			_sample.current_offset = _sample.GetOffsetFromManager();
 			_sample.Play();
+			
+			for (var i = 0; i < array_length(samples); i++)
+				samples[i].Play();
+		}
 		
 		array_push(samples, _sample);
 	}
