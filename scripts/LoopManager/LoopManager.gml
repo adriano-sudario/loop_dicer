@@ -73,15 +73,6 @@ function LoopManager(
 		array_push(samples, _sample);
 	}
 	
-	function RemoveSample(_sample) {
-		var _index = GetSampleIndex(_sample_sound);
-		
-		if (_index >= 0) {
-			_sample.Stop();
-			array_delete(samples, _index, 1);
-		}
-	}
-	
 	function RemoveSample(_sample_sound) {
 		var _index = GetSampleIndex(_sample_sound);
 		
